@@ -28,7 +28,7 @@ public class EnemyMove : MonoBehaviour
         }
     }
 
-    private void SetDestination()
+    private void SetDestination()//this sets the destination for the agent 
     {
         if(destination != null)
         {
