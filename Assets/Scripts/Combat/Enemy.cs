@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
 
         //play the damaged animation if there is one
 
-        if(currentHealth <= 0)//if health is less then or equal to 0 call die
+        if (currentHealth <= 0)//if health is less then or equal to 0 call die
         {
             Die();
         }
@@ -31,5 +31,10 @@ public class Enemy : MonoBehaviour
         //death animation
 
         //dissable the enemy
+
+        GetComponent<EnemyMove>().enabled = false;
+        GetComponent<Collider>().enabled = false;
+
+        this.enabled = false;
     }
 }

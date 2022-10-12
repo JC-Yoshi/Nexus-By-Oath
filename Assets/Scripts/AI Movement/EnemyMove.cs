@@ -32,7 +32,7 @@ public class EnemyMove : MonoBehaviour
     {
         if(destination != null)
         {
-            Vector3 targetVector= destination.transform.position;//finds the destinations location and sets = to target vector
+            Vector3 targetVector = destination.transform.position ;//finds the destinations location and sets = to target vector
             navMeshAgent.SetDestination(targetVector);  //makes the navMesh agents target = to the traget vector
         }
     }

@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     bool grounded;// yes on ground or no not on ground
 
     public Transform orientation;
+    
 
     float horizontalInput;
     float verticalInput;
@@ -42,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //calculate the movement direction
         moveDirection=orientation.forward*verticalInput+orientation.right* horizontalInput;
+        
 
         rb.AddForce(moveDirection.normalized* moveSpeed * 10f, ForceMode.Force); //applies calculated movement to the rigid body
     }
@@ -71,6 +73,10 @@ public class PlayerMovement : MonoBehaviour
             rb.drag = groundDrag;
         else
             rb.drag = 0f;
+
+
+
+      
     }
 
     private void FixedUpdate()
